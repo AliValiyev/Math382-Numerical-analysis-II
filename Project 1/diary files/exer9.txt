@@ -1,0 +1,102 @@
+%Diary Test 2
+pi
+
+ans =
+
+    3.1416
+
+cheby_points(-1,1,7)
+
+ans =
+
+   -0.2244         0         0         0         0         0         0
+   -0.6732         0         0         0         0         0         0
+   -1.1220         0         0         0         0         0         0
+   -1.5708         0         0         0         0         0         0
+   -2.0196         0         0         0         0         0         0
+   -2.4684         0         0         0         0         0         0
+   -2.9172         0         0         0         0         0         0
+
+cheby_points(-1,1,7)
+
+ans =
+
+   -0.2244   -0.6732   -1.1220   -1.5708   -2.0196   -2.4684   -2.9172
+
+cheby_points(-1,1,7)
+
+ans =
+
+   -0.9749   -0.7818   -0.4339   -0.0000    0.4339    0.7818    0.9749
+
+cheby_points(-5,5,5)
+
+ans =
+
+   -4.7553   -2.9389   -0.0000    2.9389    4.7553
+
+xdata = cheby_points(-5,5,5)
+
+xdata =
+
+   -4.7553   -2.9389   -0.0000    2.9389    4.7553
+
+scatter(xdata)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('scatter', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\graphics\scatter.m', 52)" style="font-weight:bold">scatter</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\graphics\scatter.m',52,0)">line 52</a>)
+Not enough input arguments.
+} 
+help scatter
+  <strong>scatter</strong> Scatter plot.
+     <strong>scatter</strong>(X,Y) creates a scatter plot with markers at the locations
+     specified by X and Y. One scatter object is created when X and Y are
+     vectors. Multiple scatter plots are created if X or Y are matrices.
+ 
+     <strong>scatter</strong>(X,Y,SZ) specifies the area of each marker in points squared.
+     To plot all markers with the same size, specify SZ as a scalar. To
+     plot each marker with a different size, specify SZ as a vector or
+     matrix. If SZ is an empty vector, the default size is used.
+ 
+     <strong>scatter</strong>(X,Y,SZ,C) specifies the marker colors. To plot all markers
+     with the same color, specify C as a color name or an RGB triplet. To
+     specify different colors for each scatter plot, specify C as an 
+     m-by-3 matrix of RGB triplets with one color per scatter object. To
+     specify different colors for each scatter point when a single scatter
+     plot is created, specify C as an m-by-1 vector with one value per
+     scatter point or an m-by-3 matrix of RGB triplets with one color per
+     scatter point.
+ 
+     <strong>scatter</strong>(...,'filled') fills the markers with color. Some markers, such
+     as '+' and '*' do not support filled color.
+ 
+     <strong>scatter</strong>(...,M) specifies the marker type.
+ 
+     <strong>scatter</strong>(TBL,XVAR,YVAR) creates a scatter plot with the variables XVAR
+     and YVAR from table TBL. Multiple scatter plots are created if XVAR or
+     YVAR reference multiple variables. For example, this command creates
+     two scatter plots: 
+     scatter(tbl, {'var1', 'var2'}, {'var3', 'var4'})
+ 
+     <strong>scatter</strong>(TBL,XVAR,YVAR,'filled') specifies data in a table and fills in
+     the markers.
+ 
+     <strong>scatter</strong>(...,Name, Value) modifies the scatter chart using one or more
+     name-value arguments. For example, 'LineWidth',2 sets the marker
+     outline width to 2 points.
+ 
+     <strong>scatter</strong>(AX,...) plots into the axes specified by AX instead of the
+     current axes.
+ 
+     H = <strong>scatter</strong>(...) returns one or more Scatter objects.
+ 
+     Example
+         load seamount
+         scatter(x,y,5,z)
+ 
+     See also <a href="matlab:help scatter3 -displayBanner">scatter3</a>, <a href="matlab:help swarmchart -displayBanner">swarmchart</a>, <a href="matlab:help polarscatter -displayBanner">polarscatter</a>, <a href="matlab:help bubblechart -displayBanner">bubblechart</a>.
+
+    <a href="matlab:doc scatter">Documentation for scatter</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('scatter')">Other functions named scatter</a>
+
+scatter(xdata, ydata)
+
+diary off

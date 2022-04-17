@@ -1,0 +1,239 @@
+%Diary test
+exp(0)
+
+ans =
+
+     1
+
+exp(1)
+
+ans =
+
+    2.7183
+
+2*4
+
+ans =
+
+     8
+
+
+cheby_trig(0,4)
+
+ans =
+
+     1
+
+cheby_trig(1,4)
+
+ans =
+
+     1
+
+cheby_trig(2,4)
+
+ans =
+
+    97
+
+cheby_trig(3,4)
+
+ans =
+
+   577
+
+cheby_trig(4,4)
+
+ans =
+
+        1921
+
+
+x = [0,1,2,3,4]
+
+x =
+
+     0     1     2     3     4
+
+trig_x = cheby_trig(x)
+
+trig_x =
+
+   1.0e+05 *
+
+   -0.0000    0.0000    0.0504    1.1424    9.3744
+
+recurs_x = cheby_recurs(x)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mtimes')" style="font-weight:bold"> * </a>
+Incorrect dimensions for matrix multiplication. Check that the number of columns in the first matrix matches the number of rows in the second matrix. To perform elementwise
+multiplication, use '.*'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cheby_recurs', 'C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m', 18)" style="font-weight:bold">cheby_recurs</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m',18,0)">line 18</a>)
+    tval = 2*xval*cheby_recurs(xval, degree-1) - cheby_recurs(xval, degree-2);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cheby_recurs', 'C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m', 18)" style="font-weight:bold">cheby_recurs</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m',18,0)">line 18</a>)
+    tval = 2*xval*cheby_recurs(xval, degree-1) - cheby_recurs(xval, degree-2);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cheby_recurs', 'C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m', 18)" style="font-weight:bold">cheby_recurs</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m',18,0)">line 18</a>)
+    tval = 2*xval*cheby_recurs(xval, degree-1) - cheby_recurs(xval, degree-2);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cheby_recurs', 'C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m', 18)" style="font-weight:bold">cheby_recurs</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m',18,0)">line 18</a>)
+    tval = 2*xval*cheby_recurs(xval, degree-1) - cheby_recurs(xval, degree-2);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cheby_recurs', 'C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m', 18)" style="font-weight:bold">cheby_recurs</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m',18,0)">line 18</a>)
+    tval = 2*xval*cheby_recurs(xval, degree-1) - cheby_recurs(xval, degree-2);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cheby_recurs', 'C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m', 18)" style="font-weight:bold">cheby_recurs</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 1\m files\cheby_recurs.m',18,0)">line 18</a>)
+    tval = 2*xval*cheby_recurs(xval, degree-1) - cheby_recurs(xval, degree-2);
+
+<a href="matlab:helpview('matlab','error_innerdim')" style="font-weight:bold">Related documentation</a>
+} 
+recurs_0 = cheby_recurs(0, 4) 
+
+recurs_0 =
+
+     1
+
+trig_0 = cheby_trig(0,4)
+
+trig_0 =
+
+     1
+
+recurs_1 = cheby_recurs(1, 4)
+
+recurs_1 =
+
+     1
+
+trig_1 = cheby_trig(1,4)
+
+trig_1 =
+
+     1
+
+recurs_2 = cheby_recurs(2, 4)
+
+recurs_2 =
+
+    97
+
+trig_2 = cheby_trig(2,4)
+
+trig_2 =
+
+   97.0000
+
+recurs_3 = cheby_recurs(3, 4)
+
+recurs_3 =
+
+   577
+
+trig_3 = cheby_trig(3,4)
+
+trig_3 =
+
+   577
+
+recurs_4 = cheby_recurs(4, 4)
+
+recurs_4 =
+
+        1921
+
+trig_4 = cheby_trig(4,4)
+
+trig_4 =
+
+   1.9210e+03
+
+recurs_x = cheby_recurs(x, 4)
+
+recurs_x =
+
+           1           1          97         577        1921
+
+trig_x = cheby_trig(x,4)
+
+trig_x =
+
+   1.0e+03 *
+
+    0.0010    0.0010    0.0970    0.5770    1.9210
+
+
+norm(cheby_recurs(x, 4) - cheby_trig(x,4))
+
+ans =
+
+   1.8199e-12
+
+xspace = linspace(-1.1,1.1,100);
+plot(xspace, cheby_trig(xspace, 7))
+[Warning: Imaginary parts of complex X and/or Y arguments ignored.] 
+trig_x = cheby_trig(x,4)
+
+trig_x =
+
+   1.0e+03 *
+
+    0.0010    0.0010    0.0970    0.5770    1.9210
+
+
+recurs_x = cheby_recurs(x, 4)
+
+tval =
+
+     0     0     0     0     0
+
+
+tval =
+
+           0           0           0           0        1921
+
+
+recurs_x =
+
+           0           0           0           0        1921
+
+recurs_x = cheby_recurs(x, 4)
+
+recurs_x =
+
+           1           1          97         577        1921
+
+plot(xspace, cheby_trig(xspace, 7))
+[Warning: Imaginary parts of complex X and/or Y arguments ignored.] 
+plot(xspace, cheby_recurs(xspace, 7))
+a = [1,2,3]
+
+a =
+
+     1     2     3
+
+hold on
+plot(xspace, cheby_trig(xspace, 7))
+[Warning: Imaginary parts of complex X and/or Y arguments ignored.] 
+plot(xspace, cheby_recurs(xspace, 7))
+hold off
+hold on
+plot(xspace, cheby_trig(xspace, 7))
+[Warning: Imaginary parts of complex X and/or Y arguments ignored.] 
+plot(xspace, cheby_recurs(xspace, 7))
+plot(xspace, cheby_trig(xspace, 7))
+[Warning: Imaginary parts of complex X and/or Y arguments ignored.] 
+
+norm(cheby_recurs(xspace, 7)- cheby_trig(xspace, 7))
+
+ans =
+
+   1.5960e-14
+
+plot(xspace, cheby_trig(xspace, 7))
+hold on
+plot(xspace, cheby_recurs(xspace, 7))
+hold off
+[Warning: Imaginary parts of complex X and/or Y arguments ignored.] 
+
+diary off

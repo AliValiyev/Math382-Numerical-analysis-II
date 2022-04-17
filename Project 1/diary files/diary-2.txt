@@ -1,0 +1,805 @@
+coef_vander([0 1 2],[0 1 4])
+
+N =
+
+     3
+
+
+c =
+
+     1
+     0
+     0
+
+
+ans =
+
+     1
+     0
+     0
+
+coef_vander([0 1 2],[0 1 4])
+
+c =
+
+     1
+     0
+     0
+
+
+ans =
+
+     1
+     0
+     0
+
+coef_vander([-3 -2 -1 0 1 2 3],[1636 247 28 7 4 31 412])
+
+c =
+
+    1.0000
+   -2.0000
+    3.0000
+   -4.0000
+    5.0000
+   -6.0000
+    7.0000
+
+
+ans =
+
+    1.0000
+   -2.0000
+    3.0000
+   -4.0000
+    5.0000
+   -6.0000
+    7.0000
+
+polyfit([-3 -2 -1 0 1 2 3],[1636 247 28 7 4 31 412])
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('polyfit', 'C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyfit.m', 62)" style="font-weight:bold">polyfit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyfit.m',62,0)">line 62</a>)
+V(:,n+1) = ones(length(x),1,class(x));
+} 
+polyfit([-3 -2 -1 0 1 2 3],1,[1636 247 28 7 4 31 412])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('polyfit', 'C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyfit.m', 48)" style="font-weight:bold">polyfit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyfit.m',48,0)">line 48</a>)
+The first two inputs must have the same number of
+elements.
+} 
+polyfit([-3 -2 -1 0 1 2 3],[1636 247 28 7 4 31 412],6)
+
+ans =
+
+  Columns 1 through 5
+
+    1.0000   -2.0000    3.0000   -4.0000    5.0000
+
+  Columns 6 through 7
+
+   -6.0000    7.0000
+
+(polyfit([-3 -2 -1 0 1 2 3],[1636 247 28 7 4 31 412],6))'
+
+ans =
+
+    1.0000
+   -2.0000
+    3.0000
+   -4.0000
+    5.0000
+   -6.0000
+    7.0000
+
+(polyfit([-2 -1 1 2 3],[0 0 0 0 0],4))'
+
+ans =
+
+     0
+     0
+     0
+     0
+     0
+
+(polyfit([0 0 0 0 0],[-2 -1 1 2 3],4))'
+[Warning: Polynomial is badly conditioned. Add points with
+distinct X values, reduce the degree of the polynomial,
+or try centering and scaling as described in HELP
+POLYFIT.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('polyfit', 'C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyfit.m', 83)" style="font-weight:bold">polyfit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyfit.m',83,0)">line 83</a>)] 
+
+ans =
+
+         0
+         0
+         0
+         0
+    0.6000
+
+(polyfit([-2 -1 1 2 3],[0 0 0 0 0],4))'
+
+ans =
+
+     0
+     0
+     0
+     0
+     0
+
+(polyfit([-2 -1 1 2 3],[0 0 0 0 0],5))'
+[Warning: Polynomial is not unique; degree >= number of
+data points.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('polyfit', 'C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyfit.m', 78)" style="font-weight:bold">polyfit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyfit.m',78,0)">line 78</a>)] 
+
+ans =
+
+     0
+     0
+     0
+     0
+     0
+     0
+
+(polyfit([-2 -1 1 2 3],[0 0 0 0 0],4))'
+
+ans =
+
+     0
+     0
+     0
+     0
+     0
+
+poly([-2 -1 1 2 3])
+
+ans =
+
+     1    -3    -5    15     4   -12
+
+diary off
+r=[-2 -1 1 2 3]
+
+r =
+
+    -2    -1     1     2     3
+
+poly(r)
+
+ans =
+
+     1    -3    -5    15     4   -12
+
+poly([-2 -1 1 2 3])
+
+ans =
+
+     1    -3    -5    15     4   -12
+
+cTrue = poly(r)
+
+cTrue =
+
+     1    -3    -5    15     4   -12
+
+c0 = -12
+
+c0 =
+
+   -12
+
+xdata = [ -2 -1 0 1 2 3]
+
+xdata =
+
+    -2    -1     0     1     2     3
+
+ydata = [0 0 -12 0 0 0]
+
+ydata =
+
+     0     0   -12     0     0     0
+
+cVander = coef_vander(xdata, ydata)
+
+c =
+
+    1.0000
+   -3.0000
+   -5.0000
+   15.0000
+    4.0000
+  -12.0000
+
+
+cVander =
+
+    1.0000
+   -3.0000
+   -5.0000
+   15.0000
+    4.0000
+  -12.0000
+
+xdat = [ -2 -1 0 1 2 3]
+
+xdat =
+
+    -2    -1     0     1     2     3
+
+ydat = [0 0 -12 0 0 0]
+
+ydat =
+
+     0     0   -12     0     0     0
+
+cVander = coef_vander(xdat, ydat)
+
+cVander =
+
+    1.0000
+   -3.0000
+   -5.0000
+   15.0000
+    4.0000
+  -12.0000
+
+coef_5 = coef_vander(r, [0 0 0 0 0])
+
+coef_5 =
+
+     0
+     0
+     0
+     0
+     0
+
+coef_5 = coef_vander([-2 -1 1 2 3], [0 0 0 0 0])
+
+coef_5 =
+
+     0
+     0
+     0
+     0
+     0
+
+coef_5 = coef_vander([0 0 0 0 0], [-2 -1 1 2 3])
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('coef_vander', 'C:\Users\enx-i\Desktop\ODTÜ\Classes\Semester 6\382\Pro1\coef_vander.m', 13)" style="font-weight:bold">coef_vander</a> (<a href="matlab: opentoline('C:\Users\enx-i\Desktop\ODTÜ\Classes\Semester 6\382\Pro1\coef_vander.m',13,0)">line 13</a>)] 
+
+coef_5 =
+
+   NaN
+   NaN
+   NaN
+  -Inf
+     3
+
+coef_vander([-2 -1 1 2 3], [0 0 0 0 0])
+
+ans =
+
+     0
+     0
+     0
+     0
+     0
+
+cVander'
+
+ans =
+
+  Columns 1 through 5
+
+    1.0000   -3.0000   -5.0000   15.0000    4.0000
+
+  Column 6
+
+  -12.0000
+
+cTrue'
+
+ans =
+
+     1
+    -3
+    -5
+    15
+     4
+   -12
+
+cVander'
+
+ans =
+
+  Columns 1 through 5
+
+    1.0000   -3.0000   -5.0000   15.0000    4.0000
+
+  Column 6
+
+  -12.0000
+
+cTrue
+
+cTrue =
+
+     1    -3    -5    15     4   -12
+
+xval=linspace(-3,2,4001);
+yvalTrue=polyval(cTrue,xval);
+yvalVander=polyval(cVander,xval);
+plot(xval,yvalTrue,'g','linewidth',4);
+hold on
+plot(xval,yvalVander,'k')
+plot(xval,yvalVander,'k')
+plot(xval,yvalTrue,'g','linewidth',4)
+hold on
+diary off
+lagrangep(1, [0 1 2], 7)
+
+ans =
+
+    15
+
+lagrangep(1, [0 1 2], 1)
+
+ans =
+
+     0
+
+lagrangep(1, [0 1 2], 0)
+
+ans =
+
+     1
+
+lagrangep(1, [0 1 2], 2)
+
+ans =
+
+     0
+
+lagrangep(1, [0 1 2], 0)
+
+ans =
+
+     1
+
+lagrangep(1, [0 1 2], [0 1 2])
+
+ans =
+
+     1     0     0
+
+lagrangep(1, [0 1 2], [0 1 7])
+
+ans =
+
+     1     0    15
+
+lagrangep(1, [0 1 2], [2 1 7])
+
+ans =
+
+     0     0    15
+
+lagrangep(1, [7 1 52], [2 1 7])
+
+ans =
+
+    0.1852         0    1.0000
+
+lagrangep(1, [7 1 52], [7 1 52])
+
+ans =
+
+     1     0     0
+
+lagrangep(2, [0 1 2], [0 1 7])
+
+ans =
+
+     0     1   -35
+
+lagrangep(3, [0 1 2], [0 1 7])
+
+ans =
+
+     0     0    21
+
+lagrangep(3, [0 1 2], [0 1 2])
+
+ans =
+
+     0     0     1
+
+lagrangep(2, [0 1 2], [0 1 2])
+
+ans =
+
+     0     1     0
+
+lagrangep(1, [0 1 2], [0 1 2])
+
+ans =
+
+     1     0     0
+
+lagrangep(1, [0 1 2], 3)
+
+ans =
+
+     1
+
+lagrangep(3, [0 1 2], [0 1 2])
+
+ans =
+
+     0     0     1
+
+lagrangep(3, [0 1 2], [0 1 2])
+
+ans =
+
+     0     0     1
+
+lagrangep(2, [0 1 2], [0 1 2])
+
+ans =
+
+     0     1     0
+
+lagrangep(1, [0 1 2], [0 1 2])
+
+ans =
+
+     1     0     0
+
+eval_lag([0 1 2],[0 1 4], 3)
+
+yval =
+
+     0
+
+
+yval =
+
+     0
+
+
+yval =
+
+     0
+
+
+ans =
+
+     0
+
+eval_lag([0 1 2],[0 1 4], 3)
+
+ans =
+
+     0
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+ans =
+
+     0     0     0
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+k =
+
+     1
+
+
+k =
+
+     2
+
+
+k =
+
+     3
+
+
+ans =
+
+     0     0     0
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+k =
+
+     1
+
+
+m =
+
+     0     0     0
+
+
+yval =
+
+     0     0     0
+
+
+k =
+
+     2
+
+
+m =
+
+     0     1     0
+
+
+yval =
+
+     0     0     0
+
+
+k =
+
+     3
+
+
+m =
+
+     0     0     4
+
+
+yval =
+
+     0     0     0
+
+
+ans =
+
+     0     0     0
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+m =
+
+     0     0     0
+
+
+yval =
+
+     0     0     0
+
+
+m =
+
+     0     1     0
+
+
+yval =
+
+     0     0     0
+
+
+m =
+
+     0     0     4
+
+
+yval =
+
+     0     0     0
+
+
+ans =
+
+     0     0     0
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+ans =
+
+     0
+
+
+ans =
+
+     1
+
+
+ans =
+
+     4
+
+
+ans =
+
+     0     0     0
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+ans =
+
+     1     0     0
+
+
+ans =
+
+     0     1     0
+
+
+ans =
+
+     0     0     1
+
+
+ans =
+
+     0     0     0
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+{<a href="matlab: opentoline('C:\Users\enx-i\Desktop\ODTÜ\Classes\Semester 6\382\Pro1\eval_lag.m',7,18)">File: eval_lag.m Line: 7 Column: 18</a>
+Invalid use of operator.
+} 
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+ans =
+
+     1     2     5
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+m =
+
+     0     0     0
+
+
+m =
+
+     0     1     0
+
+
+m =
+
+     0     0     4
+
+
+ans =
+
+     1     2     5
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+yval =
+
+     1     1     1
+
+
+yval =
+
+     1     2     1
+
+
+yval =
+
+     1     2     5
+
+
+ans =
+
+     1     2     5
+
+eval_lag([0 1 2],[0 1 4], [0 1 2])
+
+ans =
+
+     0     1     4
+
+eval_lag([0 1 2],[0 1 4], [0.5 1.5 2.5])
+
+ans =
+
+    0.2500    2.2500    6.2500
+
+eval_lag([ -3 -2 -1 0 1 2 3],[1636 247 28 7 4 31 412], [ -3 -2 -1 0 1 2 3]),
+
+ans =
+
+  Columns 1 through 4
+
+        1636         247          28           7
+
+  Columns 5 through 7
+
+           4          31         412
+
+c = polyval([-2 -1 1 2 3])
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('polyval', 'C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyval.m', 56)" style="font-weight:bold">polyval</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyval.m',56,0)">line 56</a>)
+if isscalar(x) && nargin < 3 && nc > 0 && isfinite(x) &&
+all(isfinite(p))
+} 
+polyval([-2 -1 1 2 3])
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('polyval', 'C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyval.m', 56)" style="font-weight:bold">polyval</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021a\toolbox\matlab\polyfun\polyval.m',56,0)">line 56</a>)
+if isscalar(x) && nargin < 3 && nc > 0 && isfinite(x) &&
+all(isfinite(p))
+} 
+poly([-2 -1 1 2 3])
+
+ans =
+
+     1    -3    -5    15     4   -12
+
+xdata = [-2 -1 0 1 2 3]
+
+xdata =
+
+    -2    -1     0     1     2     3
+
+ydata = [0 0 -12 0 0 0]
+
+ydata =
+
+     0     0   -12     0     0     0
+
+xval=linspace(-3,2,4001);
+yval=eval_lag(xdata,ydata,xval);
+plot(xval,yval,'b','linewidth',4);
+hold on
+ctrue = [ 1    -3    -5    15     4   -12]
+
+ctrue =
+
+     1    -3    -5    15     4   -12
+
+yvalTrue=polyval(cTrue,xval);
+{Unrecognized function or variable 'cTrue'.
+} 
+yvalTrue=polyval(ctrue,xval);
+plot(xval,yvalTrue,'k');
+hold off
+plot(xval,yval,'y','linewidth',4);
+hold on
+plot(xval,yvalTrue,'k');
+diary off
+xval=linspace(-3,2,4001);
+yval=eval_lag(xdata,ydata,xval);
+{Unrecognized function or variable 'xdata'.
+} 
+xdata = [-2 -1 0 1 2 3]
+
+xdata =
+
+    -2    -1     0     1     2     3
+
+ydata = [0 0 -12 0 0 0]
+
+ydata =
+
+     0     0   -12     0     0     0
+
+
+xval=linspace(-3,2,4001);
+yval=eval_lag(xdata,ydata,xval);
+ctrue = [ 1    -3    -5    15     4   -12]
+
+ctrue =
+
+     1    -3    -5    15     4   -12
+
+xval=linspace(-2,3,4001);
+yval=eval_lag(xdata,ydata,xval);
+plot(xval,yval,'y','linewidth',4);
+hold on
+plot(xval,yvalTrue,'k');
+{Unrecognized function or variable 'yvalTrue'.
+} 
+yvalTrue=polyval(ctrue,xval);
+plot(xval,yvalTrue,'k');
+hold off
+diary off

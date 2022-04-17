@@ -1,0 +1,34 @@
+%Diary test exer 10 v1.1
+%Diary test exer10 v1.2
+
+pi
+
+ans =
+
+    3.1416
+
+exer5
+
+approximationError =
+
+    0.0388
+
+exer5
+
+approximationError =
+
+   6.6116e-06
+
+exer5
+
+approximationError =
+
+   1.6550e-13
+
+exer5
+
+approximationError =
+
+    0.0388
+
+diary off

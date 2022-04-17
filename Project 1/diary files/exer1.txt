@@ -1,0 +1,92 @@
+%Diary test
+pi
+
+ans =
+
+    3.1416
+
+xdata = [0,1,2]
+
+xdata =
+
+     0     1     2
+
+ydata = [0, 1, 4]
+
+ydata =
+
+     0     1     4
+
+dir
+
+.                ..               coef_vander.asv  coef_vander.m    exer1.txt        
+
+
+c = coef_vander(xdata, ydata)
+{Out of memory. The likely cause is an infinite recursion within the program.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('coef_vander', 'C:\Users\husey\Desktop\Project 1\m files\coef_vander.m', 2)" style="font-weight:bold">coef_vander</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 1\m files\coef_vander.m',2,0)">line 2</a>)
+c = coef_vander ( xdata, ydata )
+} 
+c = coef_vander(xdata, ydata)
+
+c =
+
+     1
+     0
+     0
+
+xdata_1 = [ -3 -2 -1 0 1 2 3]
+
+xdata_1 =
+
+    -3    -2    -1     0     1     2     3
+
+ydata_1 = [1636 247 28 7 4 31 412]
+
+ydata_1 =
+
+        1636         247          28           7           4          31         412
+
+c_1 = coef_vander(xdata_1, ydata_1)
+
+c_1 =
+
+    1.0000
+   -2.0000
+    3.0000
+   -4.0000
+    5.0000
+   -6.0000
+    7.0000
+
+yval_test_1 = polyval[c_1, xdata_1]
+ yval_test_1 = polyval[c_1, xdata_1]
+                      ↑
+{Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched delimiters.
+} 
+yval_test_1 = polyval(c_1, xdata_1)
+
+yval_test_1 =
+
+   1.0e+03 *
+
+    1.6360    0.2470    0.0280    0.0070    0.0040    0.0310    0.4120
+
+norm(yval_test_1 - ydata_1)
+
+ans =
+
+   3.4173e-13
+
+c_test_1 =
+
+    0.0816    1.0000   -3.1429    3.0000         0    5.0000   -8.9388    7.0000
+
+c_test_1 = polyfit(xdata_1, ydata_1, numel(xdata_1)-1)
+
+c_test_1 =
+
+    1.0000   -2.0000    3.0000   -4.0000    5.0000   -6.0000    7.0000
+
+diary off

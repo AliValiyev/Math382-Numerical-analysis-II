@@ -1,0 +1,74 @@
+lagrangep(1,[1,2,3],1)
+
+ans =
+
+     1
+
+lagrangep(1,[1,2,3],2)
+
+ans =
+
+     0
+
+lagrangep(1,[1,2,3],3)
+
+ans =
+
+     0
+
+lagrangep(2,[1,2,3],1)
+
+ans =
+
+     0
+
+lagrangep(2,[1,2,3],2)
+
+ans =
+
+     1
+
+lagrangep(2,[1,2,3],3)
+
+ans =
+
+     0
+
+lagrangep(3,[1,2,3],1)
+
+ans =
+
+     0
+
+lagrangep(3,[1,2,3],2)
+
+ans =
+
+     0
+
+lagrangep(3,[1,2,3],3)
+
+ans =
+
+     1
+
+
+lagrangep(1,[pi,exp(1),sin(12)],pi)
+
+ans =
+
+     1
+
+lagrangep(1,[pi,exp(1),sin(12)],exp(1))
+
+ans =
+
+     0
+
+lagrangep(1,[pi,exp(1),sin(12)],sin(12))
+
+ans =
+
+     0
+
+diary off
