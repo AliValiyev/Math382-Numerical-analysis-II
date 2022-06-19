@@ -1,0 +1,129 @@
+%Diary test
+f0 = @(x) 1
+
+f0 =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)1
+
+f1 = @(x) 2*x
+
+f1 =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)2*x
+
+f2 = @(x) 3*x^2
+
+f2 =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)3*x^2
+
+f3 = @(x) 4*x^3
+
+f3 =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)4*x^3
+
+
+quad_f0 = trapezoidquad(f0,0,1,2)
+
+fvec =
+
+     0     0
+
+
+fvec =
+
+     1     0
+
+
+fvec =
+
+     1     1
+
+
+quad_f0 =
+
+     1
+
+quad_f1 = trapezoidquad(f1,0,1,2)
+
+quad_f1 =
+
+     1
+
+format long
+quad_f2 = trapezoidquad(f2,0,1,2)
+
+quad_f2 =
+
+   1.500000000000000
+
+quad_f3 = trapezoidquad(f3,0,1,2)
+
+quad_f3 =
+
+     2
+
+trap_11 = trapezoidquad(@runge,-5,5,11)
+
+trap_11 =
+
+   2.756108597285068
+
+trap_101 = trapezoidquad(@runge,-5,5,101)
+
+trap_101 =
+
+   2.746776880807905
+
+trap_1001 = trapezoidquad(@runge,-5,5,1001)
+
+trap_1001 =
+
+   2.746801287341885
+
+trap_10001 = trapezoidquad(@runge,-5,5,10001)
+
+trap_10001 =
+
+   2.746801531424546
+
+error11 = trap_11 - 2*atan(5)
+
+error11 =
+
+   0.009307063395036
+
+error101 = trap_101 - 2*atan(5)
+
+error101 =
+
+    -2.465308212640238e-05
+
+error1001 = trap_1001 - 2*atan(5)
+
+error1001 =
+
+    -2.465481472313513e-07
+
+error10001 = trap_10001 - 2*atan(5)
+
+error10001 =
+
+    -2.465485593461381e-09
+
+ratio = error1001/error10001
+
+ratio =
+
+  99.999832846402413
+
+diary off

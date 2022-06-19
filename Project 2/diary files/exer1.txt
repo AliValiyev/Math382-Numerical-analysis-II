@@ -1,0 +1,168 @@
+%Diary Test
+%Let us test our function midpointquad
+%Test #1
+
+f = @(x) 2*x
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)2*x
+
+midpointquad(f,0,1,2)
+
+ans =
+
+    0.5000
+
+midpointquad(f,0,1,2)
+
+ans =
+
+    0.5000
+
+midpointquad(f,0,1,2)
+
+ans =
+
+     1
+
+midpointquad(@(x) 4*x^3,0,2,2)
+
+ans =
+
+     8
+
+f = @(x) 1/(1+x^2)
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)1/(1+x^2)
+
+midpointquad(f,-5,5,11)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mpower', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\matfun\mpower.m', 52)" style="font-weight:bold"> ^ </a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\matfun\mpower.m',52,0)">line 52</a>)
+Incorrect dimensions for raising a matrix to a power. Check that the matrix is square and the power is a scalar. To perform elementwise matrix powers, use '.^'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('@(x)1/(1+x^2)')" style="font-weight:bold">@(x)1/(1+x^2)</a>
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('midpointquad', 'C:\Users\husey\Desktop\Project 2\m files\midpointquad.m', 13)" style="font-weight:bold">midpointquad</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 2\m files\midpointquad.m',13,0)">line 13</a>)
+fmidpts = func(xmidpts);
+} 
+f = @(x) 1/(1+x.^2)
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)1/(1+x.^2)
+
+midpointquad(f,-5,5,11)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('@(x)1/(1+x.^2)')" style="font-weight:bold">@(x)1/(1+x.^2)</a>
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('midpointquad', 'C:\Users\husey\Desktop\Project 2\m files\midpointquad.m', 13)" style="font-weight:bold">midpointquad</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 2\m files\midpointquad.m',13,0)">line 13</a>)
+fmidpts = func(xmidpts);
+} 
+midpointquad(runge,-5,5,11)
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runge', 'C:\Users\husey\Desktop\Project 2\m files\runge.m', 7)" style="font-weight:bold">runge</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 2\m files\runge.m',7,0)">line 7</a>)
+y=1./(1+x.^2);
+} 
+midpointquad(@runge,-5,5,11)
+
+ans =
+
+    2.7363
+
+midpointquad(@runge,-5,5,101)
+
+ans =
+
+    2.7468
+
+midpointquad(@runge,-5,5,1001)
+
+ans =
+
+    2.7468
+
+format long
+midpointquad(@runge,-5,5,11)
+
+ans =
+
+   2.736307727635371
+
+midpointquad(@runge,-5,5,101)
+
+ans =
+
+   2.746813859774801
+
+midpointquad(@runge,-5,5,1001)
+
+ans =
+
+   2.746801657164040
+
+midpointquad(@runge,-5,5,10001)
+
+ans =
+
+   2.746801535122772
+
+error11 = midpointquad(@runge,-5,5,11)
+
+error11 =
+
+   2.736307727635371
+
+error11 = midpointquad(@runge,-5,5,11) - 2*atan(5)
+
+error11 =
+
+  -0.010493806254661
+
+error101 = midpointquad(@runge,-5,5,101) - 2*atan(5)
+
+error101 =
+
+     1.232588476929308e-05
+
+error1001 = midpointquad(@runge,-5,5,1001) - 2*atan(5)
+
+error1001 =
+
+     1.232740078904726e-07
+
+error10001 = midpointquad(@runge,-5,5,10001) - 2*atan(5)
+
+error10001 =
+
+     1.232740132195431e-09
+
+ratio_11_101 = error11/error101
+
+ratio_11_101 =
+
+    -8.513633261283944e+02
+
+ratio_101_1001 = error101/error1001
+
+ratio_101_1001 =
+
+  99.987702032406347
+
+ratio_1001_10001 = error1001/error10001
+
+ratio_1001_10001 =
+
+  99.999995677052794
+
+diary off

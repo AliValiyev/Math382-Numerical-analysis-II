@@ -1,0 +1,82 @@
+%Diary test
+f0 = @(x) 1
+
+f0 =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)1
+
+f1 = @(x) 2*x
+
+f1 =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)2*x
+
+f2 = @(x) 3*x^2
+
+f2 =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)3*x^2
+
+f3 = @(x) 4*x^3
+
+f3 =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)4*x^3
+
+f0(3)
+
+ans =
+
+     1
+
+f1(3)
+
+ans =
+
+     6
+
+f2(3)
+
+ans =
+
+    27
+
+f3(3)
+
+ans =
+
+   108
+
+quad_f0 = midpointquad(f0,0,1,2)
+
+quad_f0 =
+
+     1
+
+quad_f1 = midpointquad(f1,0,1,2)
+
+quad_f1 =
+
+     1
+
+quad_f2 = midpointquad(f2,0,1,2)
+
+quad_f2 =
+
+    0.7500
+
+quad_f3 = midpointquad(f3,0,1,2)
+
+quad_f3 =
+
+    0.5000
+
+diary off

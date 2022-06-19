@@ -1,0 +1,210 @@
+%Diray test
+f = @(x) 2x
+ f = @(x) 2x
+           ↑
+{Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax error. To construct matrices, use brackets instead of parentheses.
+} 
+f = @(x) 2*x
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)2*x
+
+f(8)
+
+ans =
+
+    16
+
+nc_single(f,0,1,2)
+
+ans =
+
+     1
+
+f = @(x) 4*x^3
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)4*x^3
+
+g = @(x) 5*x^4
+
+g =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)5*x^4
+
+w = @(x) 6*x^5
+
+w =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)6*x^5
+
+z = @(x) 7*x^6
+
+z =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)7*x^6
+
+true_result = 1
+
+true_result =
+
+     1
+
+nc_single(@(x) 2*x,0,1,2)
+
+ans =
+
+     1
+
+error_n4_f = nc_single(f,0,1,4) - true_result
+
+error_n4_f =
+
+  -2.2204e-16
+
+format long
+error_n4_f = nc_single(f,0,1,4) - true_result
+
+error_n4_f =
+
+    -2.220446049250313e-16
+
+error_n4_f = nc_single(f,0,1,4)
+
+error_n4_f =
+
+   1.000000000000000
+
+error_n4_f = nc_single(f,0,1,4) - true_result
+
+error_n4_f =
+
+    -2.220446049250313e-16
+
+error_n4_g = nc_single(g,0,1,4) - true_result
+
+error_n4_g =
+
+   0.018518518518518
+
+error_nw_g = nc_single(w,0,1,4) - true_result
+
+error_nw_g =
+
+   0.055555555555555
+
+error_nz_g = nc_single(z,0,1,4) - true_result
+
+error_nz_g =
+
+   0.109053497942387
+
+error_n4_w = nc_single(w,0,1,4) - true_result
+
+error_n4_w =
+
+   0.055555555555555
+
+error_n4_z = nc_single(w,0,1,4) - true_result
+
+error_n4_z =
+
+   0.055555555555555
+
+error_n4_z = nc_single(z,0,1,4) - true_result
+
+error_n4_z =
+
+   0.109053497942387
+
+error_n5_f = nc_single(f,0,1,5) - true_result
+
+error_n5_f =
+
+     0
+
+error_n5_g = nc_single(g,0,1,5) - true_result
+
+error_n5_g =
+
+     0
+
+error_n5_w = nc_single(w,0,1,5) - true_result
+
+error_n5_w =
+
+     0
+
+error_n5_z = nc_single(z,0,1,5) - true_result
+
+error_n5_z =
+
+   0.002604166666667
+
+error_n4_f = nc_single(f,0,1,4) - true_result
+
+error_n4_f =
+
+    -2.220446049250313e-16
+
+nc_single(@(x) 2*x,0,1,2)
+{Unrecognized function or variable 'wec'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('nc_single', 'C:\Users\husey\Desktop\Project 2\m files\nc_single.m', 22)" style="font-weight:bold">nc_single</a> (<a href="matlab: opentoline('C:\Users\husey\Desktop\Project 2\m files\nc_single.m',22,0)">line 22</a>)
+result(i) = fvec(i)*wec(i);
+} 
+nc_single(@(x) 2*x,0,1,2)
+
+ans =
+
+     1
+
+error_n5_w = nc_single(w,0,1,5) - true_result
+
+error_n5_w =
+
+     0
+
+error_n5_z = nc_single(z,0,1,5) - true_result
+
+error_n5_z =
+
+   0.002604166666667
+
+error_n6_f = nc_single(f,0,1,6) - true_result
+
+error_n6_f =
+
+     2.220446049250313e-16
+
+error_n6_g = nc_single(g,0,1,6) - true_result
+
+error_n6_g =
+
+     2.220446049250313e-16
+
+error_n6_w = nc_single(w,0,1,6) - true_result
+
+error_n6_w =
+
+     0
+
+error_n6_z = nc_single(z,0,1,6) - true_result
+
+error_n6_z =
+
+   0.001466666666667
+
+diary off

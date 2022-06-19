@@ -1,0 +1,89 @@
+%Diary test
+f = @(x) log(x)
+
+f =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(x)log(x)
+
+f(1)
+
+ans =
+
+     0
+
+f(0)
+
+ans =
+
+  -Inf
+
+f(exp(1))
+
+ans =
+
+     1
+
+midquad_11 = midpointquad(f,0,1,11)
+
+midquad_11 =
+
+   -0.9658
+
+format long
+midquad_11 = midpointquad(f,0,1,11)
+
+midquad_11 =
+
+  -0.965759065346139
+
+midquad_101 = midpointquad(f,0,1,101)
+
+midquad_101 =
+
+  -0.996538430739562
+
+midquad_1001 = midpointquad(f,0,1,1001)
+
+midquad_1001 =
+
+  -0.999653468076384
+
+midquad_10001 = midpointquad(f,0,1,10001)
+
+midquad_10001 =
+
+  -0.999965343057639
+
+error_11 = (-1) - (midquad_11) 
+
+error_11 =
+
+  -0.034240934653861
+
+error_101 = (-1) - (midquad_101)
+
+error_101 =
+
+  -0.003461569260438
+
+error_1001 = (-1) - (midquad_1001)
+
+error_1001 =
+
+    -3.465319236158892e-04
+
+error_10001 = (-1) - (midquad_10001)
+
+error_10001 =
+
+    -3.465694236082228e-05
+
+ratio = error_1001/error_10001
+
+ratio =
+
+   9.998917965931813
+
+diary off
